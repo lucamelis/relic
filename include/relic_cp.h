@@ -1470,6 +1470,16 @@ int cp_bgn_dec2(dig_t *out, g2_t in[2], bgn_t prv);
 int cp_bgn_add(gt_t e[4], gt_t c[4], gt_t d[4]);
 
 /**
+ * Subtracts homomorphically two BGN ciphertexts in G_T.
+ *
+ * @param[out] e 				- the resulting ciphertext.
+ * @param[in] c 				- the first ciphertext.
+ * @param[in] d 				- the second ciphertext to subract from c.
+ * @return STS_OK if no errors occurred, STS_ERR otherwise.
+ */
+int cp_bgn_sub(gt_t e[4], gt_t c[4], gt_t d[4]);
+
+/**
  * Multiplies homomorphically two BGN ciphertexts in G_T.
  *
  * @param[out] e 				- the resulting ciphertext.
